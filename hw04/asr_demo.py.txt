@@ -1,0 +1,6 @@
+import whisper
+model = whisper.load_model("tiny")
+audio_path = "ai_speech.mp3"
+result = model.transcribe(audio_path, language="zh")
+print("===== 识别结果 =====")
+print(result["text"])

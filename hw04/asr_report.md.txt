@@ -1,0 +1,21 @@
+# 开源语音识别(ASR)调研与实现报告
+## 一、调研对象
+OpenAI-Whisper、Vosk、FunASR
+
+## 二、多维度对比
+| 对比维度 | OpenAI Whisper | Vosk | FunASR |
+| :--- | :--- | :--- | :--- |
+| 许可协议 | MIT（商用免费） | Apache2.0（商用免费） | Apache2.0（商用免费） |
+| 语言&方言 | 多语言，中文优秀 | 中英为主，方言弱 | 中文方言极强 |
+| 模型&速度 | tiny快、large准 | 超轻量，CPU极速 | 轻量/大模型可选 |
+| 实时流式 | 需二次开发 | 原生支持 | 原生支持 |
+| 部署难度 | 简单，开箱即用 | 最简单，无依赖 | 中等，需torch |
+| 笔记本体验 | 普通CPU可跑 | 老旧电脑流畅 | 轻量模型可跑 |
+
+## 三、选型理由
+选用OpenAI Whisper，原因：MIT协议合规、中文识别准、普通笔记本CPU可运行、代码极简易复现、完全满足音频文件识别要求。
+
+## 四、仓库来源
+- Whisper：https://github.com/openai/whisper
+- Vosk：https://github.com/alphacep/vosk-api
+- FunASR：https://github.com/alibaba-damo-academy/FunASR
